@@ -18,6 +18,7 @@
 #  include "pal_netbsd.h"
 #  include "pal_noalloc.h"
 #  include "pal_openbsd.h"
+#  include "pal_redox.h"
 #  include "pal_solaris.h"
 #  include "pal_windows.h"
 #endif
@@ -43,6 +44,8 @@ namespace snmalloc
     PALNetBSD;
 #  elif defined(__OpenBSD__)
     PALOpenBSD;
+#  elif defined(__redox__)
+    PALRedox;
 #  elif defined(__sun)
     PALSolaris;
 #  elif defined(__DragonFly__)
